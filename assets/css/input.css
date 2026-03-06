@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --brand-primary: #2563eb;   /* Blue 600 - Aksen utama */
+  --brand-secondary: #0f172a; /* Slate 900 - Teks utama */
+  --brand-surface: #f8fafc;   /* Slate 50 - Background halus */
+}
+
+@theme {
+  --color-primary: var(--brand-primary);
+  --color-secondary: var(--brand-secondary);
+  --color-surface: var(--brand-surface);
+  --color-secondary-text: #726f86;
+
+  /* Animasi Marquee CSS Murni */
+  --animate-marquee: marquee 20s linear infinite;
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Animasi Audio Visualizer Halus */
+  --animate-visualizer: visualizer 0.6s ease-in-out infinite alternate;
+  @keyframes visualizer {
+    0% { transform: scaleY(0.4); }
+    100% { transform: scaleY(1); }
+  }
+}
+
+@layer components {
+  .btn-black {
+    @apply inline-flex items-center justify-center px-10 py-4.5;
+    @apply bg-black text-white font-medium rounded-2xl;
+    @apply transition-colors duration-200;
+    @apply hover:bg-zinc-800 focus:ring-2 focus:ring-offset-2 focus:ring-black;
+    @apply active:scale-95; /* Sedikit efek tekan agar lebih interaktif */
+  }
+}
