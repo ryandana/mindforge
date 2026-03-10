@@ -1,0 +1,11 @@
+# Eve folder - internal documents
+eve/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor files
+.vscode/
+*.swp
+*.swo
